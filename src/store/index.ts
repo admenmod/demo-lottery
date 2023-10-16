@@ -1,9 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { reducer as registrationReducer } from './registration/registration.slice';
+import { reducer as playerReducer } from './player/player.slice';
 
 
 const reducers = combineReducers({
-	registration: registrationReducer
+	player: playerReducer
 });
 
 export const store = configureStore({

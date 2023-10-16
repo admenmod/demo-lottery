@@ -2,16 +2,15 @@ import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from '@reduxjs/toolkit';
 
-import { actions as registrationActions } from '../store/registration/registration.slice';
+import { actions as playerActions } from '@/store/player/player.slice';
 
 
-const rootActions = {
-	...registrationActions
+const actions = {
+	...playerActions
 };
 
 
 export const useActions = () => {
 	const dispatch = useDispatch();
-
-	return useMemo(() => bindActionCreators(rootActions, dispatch), [dispatch]);
+	return useMemo(() => bindActionCreators(actions, dispatch), [dispatch]);
 };
